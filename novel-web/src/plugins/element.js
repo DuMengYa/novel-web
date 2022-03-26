@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import Element from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
+import { ElButton } from 'element-plus'
 
-Vue.use(Element)
+export default (app) => {
+  app.use(ElButton)
+}
