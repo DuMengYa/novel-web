@@ -1,13 +1,13 @@
-// 严格模式
-'use strict'
-const path = require('path')
-const defaultSettings = require('./src/settings')
+// // 严格模式
+// 'use strict'
+// const path = require('path')
+// const defaultSettings = require('./src/settings')
 
-function resolve (dir) {
-  return path.join(__dirname, dir)
-}
-const name = defaultSettings.title || '小说网后台管理平台'
-// const { defineConfig } = require('@vue/cli-service')
+// // function resolve (dir) {
+// //   return path.join(__dirname, dir)
+// // }
+// // const name = defaultSettings.title || '小说网后台管理平台'
+// // const { defineConfig } = require('@vue/cli-service')
 module.exports = {
   // 默认情况下 babel-loader 会忽略所有 node_modules 中的文件。你可以启用本选项，以避免构建后的代码中出现未转译的第三方依赖。
   transpileDependencies: true,
@@ -24,17 +24,13 @@ module.exports = {
   productionSourceMap: false,
   // webpack-dev-server 相关配置
   devServer: {
-    open: true,
-    Proxy: {
-
-    },
-    configureWebpack: {
-      name: name,
-      resolve: {
-        alias: {
-          '@': resolve('src')
-        }
-      }
-    }
+    // open: true,
+    // proxy: {
+    //   [process.env.VUE_APP_BASE_API]: {
+    //     target: 'http://192.168.233.232:8080',
+    //     changeOrigin: true
+    //   }
+    // }
   }
-}
+
+};
